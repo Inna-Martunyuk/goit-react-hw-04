@@ -1,4 +1,4 @@
-function ErrorMessage() {
+function ErrorMessage({ error }) {
   return (
     <>
       <p>Whoops, something went wrong! Please try reloading this page!</p>

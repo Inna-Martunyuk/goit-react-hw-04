@@ -1,7 +1,8 @@
-function ImageCard() {
-    return (
-      <div>
-        <img src="" alt="" />
-      </div>
-    );
+function ImageCard({ src, alt }) {
+  return (
+    <div>
+      <img src={src} alt={alt} />
+    </div>
+  );
 }
+export default ImageCard;

@@ -7,10 +7,10 @@ function Loader(loader) {
     <div className="sweet-loading">
 
       <ClipLoader
-        color={color}
-        loading={loading}
-        cssOverride={override}
-        size={150}
+        // color={color}
+        // loading={loading}
+        // cssOverride={override}
+        // size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
