@@ -1,16 +1,19 @@
-import ImageCard from "../ImageCard/ImageCard";
+import React from "react";
+import "./ImageGallery.module.css";
 
-const ImageGallery = ({ images }) => {
-  if (!images || images.length === 0) return <p>Нічого не знайдено</p>;
-
+const ImageGallery = ({ images, onImageClick }) => {
   return (
-    <ul>
+    <div className="image-gallery">
       {images.map((image) => (
-        <li key={image.id}>
-          <img src={image.urls.small} alt={image.alt_description} />
-        </li>
+        <img
+          key={image.id}
+          src={image.urls.small}
+          alt={image.alt_description}
+          className="gallery-item"
+          onClick={() => onImageClick(image)} 
+        />
       ))}
-    </ul>
+    </div>
   );
 };
 

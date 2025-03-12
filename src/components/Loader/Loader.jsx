@@ -1,18 +1,15 @@
 
 import ClipLoader from "react-spinners/ClipLoader";
 
-function Loader(loader) {
-
+function Loader({ isLoading }) {
   return (
     <div className="sweet-loading">
-
       <ClipLoader
-        // color={color}
-        // loading={loading}
-        // cssOverride={override}
-        // size={150}
+        loading={isLoading} 
+        size={100} 
+        color="black" 
+        speedMultiplier={1} 
         aria-label="Loading Spinner"
-        data-testid="loader"
       />
     </div>
   );

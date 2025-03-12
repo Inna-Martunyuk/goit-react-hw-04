@@ -10,7 +10,6 @@ function SearchBar({ onSubmit }) {
     onSubmit(value);
     e.target.reset();
   };
-
   return (
     <>
       <header>
