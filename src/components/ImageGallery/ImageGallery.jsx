@@ -1,15 +1,15 @@
-import React from "react";
-import "./ImageGallery.module.css";
+
+import css from "./ImageGallery.module.css";
 
 const ImageGallery = ({ images, onImageClick }) => {
   return (
-    <div className="image-gallery">
+    <div className={css.gallery}>
       {images.map((image) => (
         <img
           key={image.id}
           src={image.urls.small}
           alt={image.alt_description}
-          className="gallery-item"
+          className={css.image}
           onClick={() => onImageClick(image)} 
         />
       ))}

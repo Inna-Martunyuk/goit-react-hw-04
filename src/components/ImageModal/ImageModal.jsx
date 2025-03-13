@@ -1,7 +1,6 @@
-import React from "react";
 import Modal from "react-modal";
-
 Modal.setAppElement("#root");
+import css from "./ImageModal.module.css"
 
 const ImageModal = ({ isOpen, onRequestClose, imageSrc }) => {
   return (
@@ -10,30 +9,18 @@ const ImageModal = ({ isOpen, onRequestClose, imageSrc }) => {
       onRequestClose={onRequestClose}
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
-      style={{
-        overlay: {
-          backgroundColor: "rgba(0, 0, 0, 0.8)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        },
-        content: {
-          border: "none",
-          background: "none",
-          overflow: "hidden",
-          padding: 0,
-          inset: "auto",
-        },
-      }}
+      className={css.modal}
+      overlayClassName={css.overlay}
+   
     >
       {imageSrc && imageSrc.urls ? (
         <img
           src={imageSrc.urls.regular}
           alt={imageSrc.alt_description || "Large preview"}
-          style={{ maxWidth: "90vw", maxHeight: "90vh", borderRadius: "10px" }}
+          className={css.image}
         />
       ) : (
-        <p>Зображення не знайдено</p>
+        <p>Image not found</p>
       )}
     </Modal>
   );

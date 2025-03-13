@@ -1,9 +1,9 @@
-
+import css from "./Loader.module.css"
 import ClipLoader from "react-spinners/ClipLoader";
 
 function Loader({ isLoading }) {
   return (
-    <div className="sweet-loading">
+    <div className={css.loader}>
       <ClipLoader
         loading={isLoading} 
         size={100} 
